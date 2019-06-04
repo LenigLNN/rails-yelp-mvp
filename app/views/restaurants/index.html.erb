@@ -1,2 +1,6 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<h1><strong>Restaurants</strong></h1>
+<p><i>Welcome to this page about great restaurants! Just select the one you want to see more details about.</i></p>
+
+<% @restaurants.each do |restaurant| %>
+  <h2><%= link_to restaurant.name, restaurant_path(restaurant), class: "btn btn-primary"%></h2>
+<% end %>

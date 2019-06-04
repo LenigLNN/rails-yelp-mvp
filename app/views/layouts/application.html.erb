@@ -13,6 +13,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar">
+      <h3><i>The best restaurants in town!</i></h3>
+      <div>
+        <%= link_to "Add restaurant", new_restaurant_path, class: "btn btn-success" %>
+        <%= link_to "Go to all restaurants", restaurants_path, class: "btn btn-warning" %>
+      </div>
+    </div>
+    <div class="container">
+      <div class="column">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
